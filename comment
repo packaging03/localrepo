@@ -1,0 +1,69 @@
+
+Obviously i am new to Civicrm hence that is why i have written the comment below and if i am wrong eventually, i would appreciate
+a correction from you or the technical team
+
+1. I discover that the two Civicrm Entities in question(Contribution and Contribution Page) which comprises almost all the data 
+needed to populate on the table does not have a tight connection
+2. Hence to really undergo the task, you have to create your own new Entity which will comprises all the data you needed.
+
+Once the Entity is created, you just need to fetch from it and display it wherever you want which solve the task.
+
+Please i would appreciate if there is another way to do this as i have said before.
+
+
+I tried to do this but i encountered a challenge just because of civix not connecting with the database to create the new Entity 
+and the Api for it.
+
+
+This is the details of the error i am getting
+
+MACs-MacBook:extensions Moyi$ civix generate:entity MyEntity
+<p>Initialization Error</p><p><pre>Array
+(
+    [callback] =&gt; Array
+        (
+            [0] =&gt; CRM_Core_Error
+            [1] =&gt; simpleHandler
+        )
+
+    [code] =&gt; -24
+    [message] =&gt; DB Error: connect failed
+    [mode] =&gt; 16
+    [debug_info] =&gt;  [nativecode=No such file or directory]
+    [type] =&gt; DB_Error
+    [user_info] =&gt;  [nativecode=No such file or directory]
+    [to_string] =&gt; [db_error: message=&quot;DB Error: connect failed&quot; 
+    code=-24 mode=callback callback=CRM_Core_Error::simpleHandler prefix=&quot;&quot; info=&quot; 
+    [nativecode=No such file or directory]&quot;]
+)
+</pre></p><p></p>
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or 
+the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most 
+likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+in /Applications/XAMPP/xamppfiles/htdocs/aks/sites/all/modules/civicrm/CRM/Core/Error.php on line 668
+
+
+MACs-MacBook:extensions Moyi$ civix generate:api NewEntity newaction
+<p>Initialization Error</p><p><pre>Array
+(
+    [callback] =&gt; Array
+        (
+            [0] =&gt; CRM_Core_Error
+            [1] =&gt; simpleHandler
+        )
+
+    [code] =&gt; -24
+    [message] =&gt; DB Error: connect failed
+    [mode] =&gt; 16
+    [debug_info] =&gt;  [nativecode=No such file or directory]
+    [type] =&gt; DB_Error
+    [user_info] =&gt;  [nativecode=No such file or directory]
+    [to_string] =&gt; [db_error: message=&quot;DB Error: connect failed&quot; 
+    code=-24 mode=callback callback=CRM_Core_Error::simpleHandler prefix=&quot;&quot; info=&quot; 
+    [nativecode=No such file or directory]&quot;]
+)
+</pre></p><p></p>
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or 
+the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most 
+likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. 
+in /Applications/XAMPP/xamppfiles/htdocs/aks/sites/all/modules/civicrm/CRM/Core/Error.php on line 668
